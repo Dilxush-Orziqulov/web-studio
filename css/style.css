@@ -30,6 +30,7 @@ nav {
     list-style: none;
     justify-content: space-between;
     gap: 50px;
+    flex-direction: row;
 }
 
 .nav-center ul a,
@@ -45,11 +46,26 @@ nav {
 
 }
 
-.nav-center ul a:hover,
-.nav-end ul a:hover {
+.nav-center ul a:hover {
     color: #2196F3;
     transition: 0.2s;
     border-bottom: 3px solid #2196F3;
+}
+
+.nav-end ul a:hover,
+.nav-icon i:hover {
+    color: #2196F3;
+    transition: 0.2s;
+}
+
+.nav-icon {
+    display: none;
+}
+
+.nav-icon i {
+    font-size: 40px;
+    color: #757575;
+    text-decoration: none;
 }
 
 
@@ -242,6 +258,14 @@ main .btn:active {
     color: #fff;
 }
 
+.clients {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 94px;
+}
+
 
 .client {
     width: 170px;
@@ -266,7 +290,6 @@ footer {
 footer .container {
     display: flex;
     gap: 70px;
-    flex-wrap: wrap;
 }
 
 footer .footer-start {
@@ -376,3 +399,53 @@ footer .icon:hover {
 .footer-btn:active {
     transform: translateX(-5px);
 }
+
+
+@media only screen and (max-width: 992px) {
+    .nav-end ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .img-wrap {
+        display: none;
+    }
+
+    .clients {
+        flex-wrap: wrap;
+    }
+
+    footer .container {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .footer-end h4 {
+        text-align: center;
+    }
+
+    .footer-mail {
+        flex-direction: column;
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+
+    .nav-center, .nav-end{
+        display: none;
+    }
+
+    .nav-icon{
+        display: block;
+    }
+
+    .cards{
+        justify-content: center;
+    }
+
+    .footer-mail input{
+        width: 350px;
+    }
+}
+
