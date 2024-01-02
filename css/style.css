@@ -449,3 +449,9 @@ footer .icon:hover {
     }
 }
 
+@media only screen and (max-width: 571px) {
+    .clients{
+        justify-content: center;
+    }
+}
+
